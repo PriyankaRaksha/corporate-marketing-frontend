@@ -1,0 +1,27 @@
+<html>
+
+<body>
+
+<h2>Create Campaign</h2>
+
+<input id="name" placeholder="campaign name">
+
+<input id="budget" placeholder="budget">
+
+<button onclick="createCampaign()">Create</button>
+
+<script>
+
+function createCampaign(){
+
+fetch("http://localhost:8001/campaigns",{
+method:"POST"
+})
+
+}
+
+</script>
+
+</body>
+
+</html>
