@@ -1,4 +1,5 @@
 from fastapi import APIRouter
+from app.services.campaign_service import add_campaign
 
 router = APIRouter()
 
@@ -12,3 +13,7 @@ def create_campaign(name:str, budget:int):
     }
     campaigns.append(campaign)
     return campaign
+
+@router.post("/campaigns/list")
+def create_campaign(name:str, budget:int):
+    return add_campaign(name, budget)
