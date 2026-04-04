@@ -8,5 +8,11 @@ analytics = {
 }
 
 @router.get("/analytics")
-def get_analytics():
-    return analytics
+def analytics():
+
+    data = {
+        "campaigns": 10,
+        "leads": 120
+    }
+
+    return data
