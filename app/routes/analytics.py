@@ -1,12 +1,15 @@
 from fastapi import APIRouter
+from app.services.user_service import add_user
 
 router = APIRouter()
 
-analytics = {
-    "campaigns": 4,
-    "active_users": 25
-}
-
 @router.get("/analytics")
-def get_analytics():
-    return analytics
+
+def analytics():
+
+    data = {
+        "campaigns": 10,
+        "leads": 120
+    }
+
+    return data
