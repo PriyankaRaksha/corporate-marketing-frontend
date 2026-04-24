@@ -17,3 +17,7 @@ def create_campaign(name:str, budget:int):
 @router.post("/campaigns/list")
 def create_campaign(name:str, budget:int):
     return add_campaign(name, budget)
+
+@router.get("/campaigns/product")
+def get_campaigns():
+    return [] 
