@@ -10,3 +10,6 @@ def add_campaign(name, budget):
     campaigns.append(campaign)
 
     return campaign
+
+def fetch_campaigns():
+    return db.query("SELECT * FROM campaigns WHERE active=1")
