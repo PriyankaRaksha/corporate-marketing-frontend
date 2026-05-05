@@ -1,0 +1,3 @@
+services:
+  marketing:
+    image: marketing:v2
