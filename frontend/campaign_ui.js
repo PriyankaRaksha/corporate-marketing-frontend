@@ -7,3 +7,9 @@ function renderCampaign(data) {
         </section>
     `;
 }
+
+function showCampaignStats(data) {
+    document.getElementById("stats").innerHTML = `
+        <p>Total Clicks: ${data.clicks}</p>
+    `;
+}
