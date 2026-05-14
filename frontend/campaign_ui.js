@@ -15,3 +15,7 @@ function showCampaignStats(data) {
         <p>Total Clicks: ${data.clicks}</p>
     `;
 }
+
+function enableCampaignTracking() {
+    console.log("Tracking enabled");
+}
