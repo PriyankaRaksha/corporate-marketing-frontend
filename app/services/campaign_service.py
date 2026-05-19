@@ -22,3 +22,8 @@ def fetch_active_campaigns():
     return db.query(
         "SELECT * FROM campaigns WHERE status='active'"
     )
+
+def fetch_campaign_clicks():
+    return db.query(
+        "SELECT clicks FROM campaign_stats"
+    )
