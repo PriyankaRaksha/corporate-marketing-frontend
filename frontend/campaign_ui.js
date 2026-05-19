@@ -19,3 +19,8 @@ function showCampaignStats(data) {
 function enableCampaignTracking() {
     console.log("Tracking enabled");
 }
+
+function loadCampaignBanner(title) {
+    document.getElementById("banner").innerHTML =
+        `<h2>${title}</h2>`;
+}
