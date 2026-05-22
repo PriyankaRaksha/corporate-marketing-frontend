@@ -24,3 +24,8 @@ function loadCampaignBanner(title) {
     document.getElementById("banner").innerHTML =
         `<h2>${title}</h2>`;
 }
+
+function renderCampaignMetrics(data) {
+    document.getElementById("metrics").innerHTML =
+        `<p>${data.views}</p>`;
+}
