@@ -8,3 +8,8 @@ def test_create_campaign():
     response = client.post("/campaigns")
 
     assert response.status_code == 200
+
+def test_campaign_response():
+    response = client.get("/campaigns")
+
+    assert response.status_code == 200
