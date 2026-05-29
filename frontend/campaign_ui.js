@@ -24,3 +24,15 @@ function loadCampaignBanner(title) {
     document.getElementById("banner").innerHTML =
         `<h2>${title}</h2>`;
 }
+
+function renderCampaignMetrics(data) {
+    document.getElementById("metrics").innerHTML =
+        `<p>${data.views}</p>`;
+}
+
+function cacheMetrics(data) {
+    sessionStorage.setItem(
+        "campaignMetrics",
+        JSON.stringify(data)
+    );
+}
