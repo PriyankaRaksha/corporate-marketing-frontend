@@ -27,3 +27,8 @@ def fetch_campaign_clicks():
     return db.query(
         "SELECT clicks FROM campaign_stats"
     )
+
+def optimize_metrics_query():
+    return db.query(
+        "SELECT views, clicks FROM campaign_stats LIMIT 100"
+    )
