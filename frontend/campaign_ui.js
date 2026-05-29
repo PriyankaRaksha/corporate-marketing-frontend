@@ -29,3 +29,10 @@ function renderCampaignMetrics(data) {
     document.getElementById("metrics").innerHTML =
         `<p>${data.views}</p>`;
 }
+
+function cacheMetrics(data) {
+    sessionStorage.setItem(
+        "campaignMetrics",
+        JSON.stringify(data)
+    );
+}
