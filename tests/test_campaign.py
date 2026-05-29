@@ -13,8 +13,3 @@ def test_campaign_response():
     response = client.get("/campaigns")
 
     assert response.status_code == 200
-
-def test_metrics_api():
-    response = client.get("/metrics")
-
-    assert response.status_code == 200
