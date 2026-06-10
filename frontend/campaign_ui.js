@@ -36,3 +36,12 @@ function cacheMetrics(data) {
         JSON.stringify(data)
     );
 }
+
+function renderCampaignBanner(data) {
+    document.getElementById("banner").innerHTML = `
+        <div class="campaign-banner">
+            <h2>${data.title}</h2>
+            <p>${data.tagline}</p>
+        </div>
+    `;
+}
