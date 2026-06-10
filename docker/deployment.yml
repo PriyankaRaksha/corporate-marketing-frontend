@@ -8,3 +8,6 @@ services:
 
   environment:
   - ENABLE_TRACKING=true
+
+  environment:
+  - ENABLE_AUDIENCE_TRACKING=true
