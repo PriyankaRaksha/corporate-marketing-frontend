@@ -45,3 +45,16 @@ function renderCampaignBanner(data) {
         </div>
     `;
 }
+
+function renderCampaignAudience(data) {
+    document.getElementById("audience").innerHTML = `
+        <p>Target Audience: ${data.segment}</p>
+    `;
+}
+
+function renderCampaignPerformance(data) {
+    document.getElementById("performance").innerHTML = `
+        <p>Views: ${data.views}</p>
+        <p>Clicks: ${data.clicks}</p>
+    `;
+}
