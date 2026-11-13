@@ -58,3 +58,23 @@ function renderCampaignPerformance(data) {
         <p>Clicks: ${data.clicks}</p>
     `;
 }
+
+function renderCampaignSummary(metrics) {
+    const container = document.getElementById("campaign-summary");
+    if (!container) return;
+
+    container.innerHTML = `
+        <div class="summary-card">
+            <h3>Total Campaigns</h3>
+            <p>${metrics.total_campaigns}</p>
+        </div>
+        <div class="summary-card">
+            <h3>Active Campaigns</h3>
+            <p>${metrics.active_campaigns}</p>
+        </div>
+        <div class="summary-card">
+            <h3>Total Clicks</h3>
+            <p>${metrics.total_clicks}</p>
+        </div>
+    `;
+}
