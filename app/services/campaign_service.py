@@ -39,3 +39,23 @@ def fetch_campaign_banner(campaign_id):
         "SELECT title, taglineS FROM campaigns WHERE id=%s",
         campaign_id
     )
+
+def get_campaign_summary(campaigns):
+    total_campaigns = len(campaigns)
+
+    active_campaigns = [
+        campaign for campaign in campaigns
+        if campaign.get("status") == "active"
+    ]
+
+    total_clicks = sum(
+        campaign.get("clicks", 0)
+        for campaign in campaigns
+    )
+
+    return {
+        "total_campaigns": total_campaigns,
+        "active_campaigns": len(active_campaigns),
+        "total_clicks": total_clicks
+    }
+
